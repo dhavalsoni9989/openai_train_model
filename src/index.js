@@ -30,7 +30,7 @@ app.get("/list-fine-tunes", async (req, res) => {
     });
 });
 
-app.get("/find-tune/:id", async (req, res) => {
+app.get("/fine-tune/:id", async (req, res) => {
     const fineTune = req.params.id;
     const response = await openai.retrieveFineTune(fineTune);
     res.status(200).json({
