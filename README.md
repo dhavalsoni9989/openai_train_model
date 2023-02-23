@@ -25,6 +25,7 @@ The environment variables can be found and modified in the `.env` file. They com
 # Port number
 PORT=3000
 
+# OpenAI API key
 OPENAI_API_KEY=sk-XXXXX
 ```
 
