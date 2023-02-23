@@ -56,20 +56,22 @@ app.post("/train-model", async (req, res) => {
 });
 
 app.post("/completion", async (req, res) => {
-    console.log("req.body ::::: ",req.body);
-    const response = await openai.createCompletion({
-        model: "text-davinci-003",
-        prompt: req.body.query,
-        temperature: 0.7,
-        max_tokens: 256,
-        top_p: 1,
-        frequency_penalty: 0,
-        presence_penalty: 0,
-    });
-    res.status(200).json({
-        message: "Successfully Train Model",
-        response: response.data.choices[0].text,
-    });
+    return openai
+        .createCompletion({
+            model: "text-davinci-003",
+            prompt: req.body.query,
+            temperature: 0.7,
+            max_tokens: 256,
+            top_p: 1,
+            frequency_penalty: 0,
+            presence_penalty: 0,
+        })
+        .then((response) => {
+            return res.status(200).json({
+                message: "Successfully Train Model",
+                response: response.data.choices[0].text,
+            });
+        });
 });
 
 app.listen(port, () => {
