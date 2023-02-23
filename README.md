@@ -37,3 +37,4 @@ List of available routes:
 `GET /list-fine-tunes` - List Fine Tunes\
 `GET /fine-tune/:id` - Get Particular Fine Tune with id\
 `POST /train-model` - Train OpenAI Model\
+`POST /completion` - Train OpenAI Model\
