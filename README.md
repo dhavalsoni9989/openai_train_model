@@ -1,6 +1,6 @@
 # Node - OpenAI Train Model
 
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](https://makeapullrequest.com)
 
 ![alt text](https://github.com/dhavalsoni9989/openai_train_model/blob/3d68633a15c3eecd55f6166eb3b153a93123e056/public/openai.png?raw=true)
 
