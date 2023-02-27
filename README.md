@@ -51,16 +51,16 @@ Linting:
 
 ```bash
 # run ESLint
-yarn lint
+npm lint
 
 # fix ESLint errors
-yarn lint:fix
+npm lint:fix
 
 # run prettier
-yarn prettier
+npm prettier
 
 # fix prettier errors
-yarn prettier:fix
+npm prettier:fix
 ```
 
 ## Environment Variables
