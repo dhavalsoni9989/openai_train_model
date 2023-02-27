@@ -1,26 +1,33 @@
 {
-  "name": "openai_train_model",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "start": "node src/index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/dhavalsoni9989/openai_train_model.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/dhavalsoni9989/openai_train_model/issues"
-  },
-  "homepage": "https://github.com/dhavalsoni9989/openai_train_model#readme",
-  "dependencies": {
-    "dotenv": "^16.0.3",
-    "express": "^4.18.2",
-    "openai": "^3.1.0"
-  }
+    "name": "openai_train_model",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "start": "node src/index.js",
+        "lint": "eslint --fix .",
+        "lint:fix": "eslint --fix .",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/dhavalsoni9989/openai_train_model.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/dhavalsoni9989/openai_train_model/issues"
+    },
+    "homepage": "https://github.com/dhavalsoni9989/openai_train_model#readme",
+    "dependencies": {
+        "dotenv": "^16.0.3",
+        "express": "^4.18.2",
+        "openai": "^3.1.0"
+    },
+    "devDependencies": {
+        "@typescript-eslint/eslint-plugin": "^5.53.0",
+        "eslint-config-prettier": "^8.6.0",
+        "eslint-plugin-prettier": "^4.2.1"
+    }
 }
