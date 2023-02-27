@@ -18,7 +18,7 @@ Clone the repo:
 
 ```bash
 git clone --depth 1 https://github.com/dhavalsoni9989/openai_train_model.git
-cd node-express-boilerplate
+cd openai_train_model
 npx rimraf ./.git
 ```
 
