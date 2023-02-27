@@ -8,7 +8,7 @@ If you have an awesome new feature that you want to implement or you found a bug
 
 -   **Create an issue** to explain and discuss the details
 -   **Fork the repo**
--   **Clone the repo** and set it up (check out the [manual installation](https://github.com/dhavalsoni9989/openai_train_model#using-npm) section in README.md)
+-   **Clone the repo** and set it up (check out the [manual installation](https://github.com/dhavalsoni9989/openai_train_model#manual-installation) section in README.md)
 -   **Implement** the necessary changes
 -   **Create tests** to keep the code coverage high
 -   **Send a pull request**
