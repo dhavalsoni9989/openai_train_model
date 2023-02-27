@@ -38,11 +38,29 @@ cp .env.example .env
 
 ## Available scripts
 
+Running locally:
+
 ```bash
 # Start Project
 
 npm start
 
+```
+
+Linting:
+
+```bash
+# run ESLint
+yarn lint
+
+# fix ESLint errors
+yarn lint:fix
+
+# run prettier
+yarn prettier
+
+# fix prettier errors
+yarn prettier:fix
 ```
 
 ## Environment Variables
@@ -67,6 +85,39 @@ List of available routes:
 `GET /fine-tune/:id` - Get Particular Fine Tune with id\
 `POST /train-model` - Train OpenAI Model\
 `POST /completion` - OpenAI Completion code
+
+### Sample Code for OpenAI Completion
+
+```javascript
+return openai
+    .createCompletion({
+        model: 'text-davinci-003',
+        prompt: 'Summary about global warming',
+        temperature: 0.7,
+        max_tokens: 256,
+        top_p: 1,
+        frequency_penalty: 0,
+        presence_penalty: 0,
+    })
+    .then((response) => {
+        return res.status(200).json({
+            message: 'Successfully Fetch Completion text',
+            response: response.data.choices[0].text,
+        });
+    });
+```
+
+## Linting
+
+Linting is done using [ESLint](https://eslint.org/) and [Prettier](https://prettier.io).
+
+In this app, ESLint is configured to follow the [Airbnb JavaScript style guide](https://github.com/airbnb/javascript/tree/master/packages/eslint-config-airbnb-base) with some modifications. It also extends [eslint-config-prettier](https://github.com/prettier/eslint-config-prettier) to turn off all rules that are unnecessary or might conflict with Prettier.
+
+To modify the ESLint configuration, update the `.eslintrc.json` file. To modify the Prettier configuration, update the `.prettierrc` file.
+
+To prevent a certain file or directory from being linted, add it to `.eslintignore` and `.prettierignore`.
+
+To maintain a consistent coding style across different IDEs, the project contains `.editorconfig`
 
 ## Contributing
 

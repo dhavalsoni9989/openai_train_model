@@ -76,7 +76,7 @@ app.post('/completion', async (req, res) => {
         })
         .then((response) => {
             return res.status(200).json({
-                message: 'Successfully Train Model',
+                message: 'Successfully Fetch Completion text',
                 response: response.data.choices[0].text,
             });
         });
