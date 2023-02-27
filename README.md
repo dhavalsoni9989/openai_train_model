@@ -25,7 +25,7 @@ npx rimraf ./.git
 Install the dependencies:
 
 ```bash
-yarn install
+npm install
 ```
 
 Set the environment variables:
