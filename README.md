@@ -6,6 +6,12 @@
 
 This project has been template and mvc structure for crud operations.
 
+https://replit.com/@dhavalsoni9989/openaitrainmodel?v=1
+
+## Here is the working example
+
+https://replit.com/@dhavalsoni9989/openaitrainmodel?v=1
+
 ## Using NPM
 
 -   Run `npm i` to install the project dependencies
