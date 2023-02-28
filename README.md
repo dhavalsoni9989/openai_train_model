@@ -89,22 +89,25 @@ List of available routes:
 ### Sample Code for OpenAI Completion
 
 ```javascript
-return openai
-    .createCompletion({
+try {
+    const completion = await openai.createCompletion({
         model: 'text-davinci-003',
-        prompt: 'Summary about global warming',
+        prompt: 'Hello world',
         temperature: 0.7,
         max_tokens: 256,
         top_p: 1,
         frequency_penalty: 0,
         presence_penalty: 0,
-    })
-    .then((response) => {
-        return res.status(200).json({
-            message: 'Successfully Fetch Completion text',
-            response: response.data.choices[0].text,
-        });
     });
+    console.log(completion.data.choices[0].text);
+} catch (error) {
+    if (error.response) {
+        console.log(error.response.status);
+        console.log(error.response.data);
+    } else {
+        console.log(error.message);
+    }
+}
 ```
 
 ## Linting
