@@ -1,7 +1,7 @@
 {
     "name": "openai_train_model",
     "version": "1.0.0",
-    "description": "",
+    "description": "OpenAI Train Model using nodejs",
     "main": "index.js",
     "scripts": {
         "start": "node src/index.js",
@@ -15,8 +15,18 @@
         "type": "git",
         "url": "git+https://github.com/dhavalsoni9989/openai_train_model.git"
     },
-    "keywords": [],
-    "author": "",
+    "keywords": [
+        "openai",
+        "node",
+        "node.js",
+        "express",
+        "api",
+        "jest",
+        "travis",
+        "eslint",
+        "prettier"
+    ],
+    "author": "dhavalsoni9989@gmail.com",
     "license": "ISC",
     "bugs": {
         "url": "https://github.com/dhavalsoni9989/openai_train_model/issues"
@@ -26,7 +36,9 @@
         "dotenv": "^16.0.3",
         "express": "^4.18.2",
         "express-rate-limit": "^6.7.0",
-        "openai": "^3.1.0"
+        "openai": "^3.1.0",
+        "swagger-jsdoc": "^6.2.8",
+        "swagger-ui-express": "^4.6.2"
     },
     "devDependencies": {
         "@typescript-eslint/eslint-plugin": "^5.53.0",

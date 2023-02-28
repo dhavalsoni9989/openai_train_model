@@ -3,6 +3,10 @@ const fs = require('fs');
 const express = require('express');
 const bodyParser = require('body-parser');
 const rateLimit = require('express-rate-limit');
+const swaggerUi = require('swagger-ui-express');
+const swaggerJsdoc = require('swagger-jsdoc');
+const swaggerDefinition = require('./docs/swaggerDef');
+
 require('dotenv').config();
 
 const app = express();
@@ -21,6 +25,18 @@ const configuration = new Configuration({
     apiKey: process.env.OPENAI_API_KEY,
 });
 const openai = new OpenAIApi(configuration);
+
+const specs = swaggerJsdoc({
+    swaggerDefinition,
+    apis: ['src/docs/*.yml', 'src/docs/*.js'],
+});
+app.use('/', swaggerUi.serve);
+app.get(
+    '/',
+    swaggerUi.setup(specs, {
+        explorer: true,
+    }),
+);
 
 app.get('/list-files', async (req, res) => {
     const response = await openai.listFiles();
